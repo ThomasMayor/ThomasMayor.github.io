@@ -117,30 +117,31 @@
         height: 9px;
         top: 5px;
     }
+    .container {
+      padding: 10px;
+      width: 300px;
+      margin: 0 auto;
+    }
 
   </style>
 </head>
-<body>
-  <div class="row">
-    <div class="col s12 m6 l4 xl3 center-block nomarginpadding">
-      <div class="card light-blue darken-4 nomarginpadding">
-        <div class="card-content white-text center-align">
-          <span class="card-title">ItRtG Timer</span>
-          <div id="clock"></div>
-          <div class="padding">
-            <a class="waves-effect waves-light btn-large light-blue darken-2" id="btnStart"><i class="material-icons medium" id="btnStartIcon">alarm_on</i></a>
-          </div>
-          <div id="stageContainer">              
-            <a class="waves-effect waves-light btn-small margin-right light-blue darken-2" id="minus"><i class="material-icons small">keyboard_arrow_left</i></a>
-            <span id="stage"></span>
-            <a class="waves-effect waves-light btn-small margin-left light-blue darken-2" id="plus"><i class="material-icons small">keyboard_arrow_right</i></a>
-          </div>
-          <div class="flex margin-top">
-            <i class="material-icons small icon-left">volume_mute</i>
-            <div id="volume"></div>
-            <i class="material-icons small icon-right">volume_up</i>
-          </div>
-        </div>
+<body class="light-blue darken-4">
+  <div class="container">
+    <div class="light-blue darken-4 nomarginpadding white-text center-align">
+      <span class="card-title">ItRtG Timer</span>
+      <div id="clock"></div>
+      <div class="padding">
+        <a class="waves-effect waves-light btn-large light-blue darken-2" id="btnStart"><i class="material-icons medium" id="btnStartIcon">alarm_on</i></a>
+      </div>
+      <div id="stageContainer">              
+        <a class="waves-effect waves-light btn-small margin-right light-blue darken-2" id="minus"><i class="material-icons small">keyboard_arrow_left</i></a>
+        <span id="stage"></span>
+        <a class="waves-effect waves-light btn-small margin-left light-blue darken-2" id="plus"><i class="material-icons small">keyboard_arrow_right</i></a>
+      </div>
+      <div class="flex margin-top">
+        <i class="material-icons small icon-left">volume_mute</i>
+        <div id="volume"></div>
+        <i class="material-icons small icon-right">volume_up</i>
       </div>
     </div>
   </div>
