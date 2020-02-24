@@ -25,19 +25,12 @@
       window.addEventListener('beforeinstallprompt', (e) => {
         // Stash the event so it can be triggered later.
         deferredPrompt = e;
-        console.info('beforeinstallprompt')
-        let modal = document.getElementById('modal1');
-        var instance = M.Modal.getInstance(modal)
-        instance.open();
-      });
-
-      document.addEventListener('DOMContentLoaded', () => {
-        var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems, {});
-        document.getElementById('agree')
-              .addEventListener('click', () => {
-                // Show the prompt
-                deferredPrompt.prompt();
+        html = '<span>Add to home screen ?</span><button id="install" class="btn-flat toast-action">Install</button><button class="btn-flat toast-action">Undo</button>';
+        M.toast({ html, displayLength: 3600000 });
+        const button = document.getElementById('install');
+        button.addEventListener('click', () => {
+          // Show the prompt
+          deferredPrompt.prompt();
                 // Wait for the user to respond to the prompt
                 deferredPrompt.userChoice
                               .then((choiceResult) => {
@@ -48,10 +41,9 @@
                                 }
                                 deferredPrompt = null;
                               });
-
-              })
+        });
+       
       });
-
       
     }
     else {
