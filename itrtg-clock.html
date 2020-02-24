@@ -25,7 +25,7 @@
       window.addEventListener('beforeinstallprompt', (e) => {
         // Stash the event so it can be triggered later.
         deferredPrompt = e;
-        html = '<span>Add to home screen ?</span><button id="install" class="btn-flat toast-action">Install</button><button id="close" class="btn-flat toast-action">Close</button>';
+        const html = '<span>Add to home screen ?</span><button id="install" class="btn-flat toast-action">Install</button><button id="close" class="btn-flat toast-action">Close</button>';
         const toast = M.toast({ html, displayLength: 3600000 });
         const btnInstall = document.getElementById('install');
         const btnClose = document.getElementById('close');
